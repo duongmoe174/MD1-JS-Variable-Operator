@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính trung bình cộng</title>
+</head>
+<body>
+<input type="number" id="ly" placeholder="Nhập điểm Lý vào!">
+<input type="number" id="hoa" placeholder="Nhập điểm Hóa vào">
+<input type="number" id="sinh" placeholder="Nhập điểm Sinh vào">
+<button id="average" onclick="tinhTBC()">Tính cho tớ đi!</button>
+<script>
+    function tinhTBC(){
+        // khai báo biến và lấy giá trị từ thẻ <input>
+        let ly = document.getElementById("ly").value;
+        let hoa = document.getElementById("hoa").value;
+        let sinh = document.getElementById("sinh").value;
+        // chuyển dữ liệu về số nguyên
+        let diemLy = parseInt(ly);
+        let diemHoa= parseInt(hoa);
+        let diemSinh = parseInt(sinh);
+        let sum = diemLy + diemHoa + diemSinh;
+        let avg = sum/3;
+        if(avg <= 5){
+            alert("Tổng điểm của bạn là: điểm"+sum+ +"|||"+"điểm tb là: " + avg +" "+"Bạn nên học lại!");
+        }else{
+            alert("Tổng điểm của bạn là: "+sum+"|||"+"điểm tb là: " + avg +" "+"Đúng là con trai của ta!");
+        }
+    }
+</script>
+</body>
+</html>

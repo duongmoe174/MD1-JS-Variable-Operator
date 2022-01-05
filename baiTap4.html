@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi hình tròn</title>
+</head>
+<body>
+<input type="text" id="bankinh" placeholder="Nhập bán kính">
+<button onclick="tinhDienTich()">Tính chu vi</button>
+<p id="cvhinhtron"></p>
+<script>
+    function tinhDienTich(){
+        let r = Number(document.getElementById("bankinh").value);
+        let dientich = 2*r*3.14;
+        document.getElementById("cvhinhtron").innerText = "Diện tích hình tròn là: " + dientich;
+    }
+</script>
+</body>
+</html>
